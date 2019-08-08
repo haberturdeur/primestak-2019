@@ -12,7 +12,7 @@
 #define ODEMCENO 0
 #define CAS_POHYBU_SERVA 150
 
-#define POCET_HODNOT_POT 10
+#define POCET_HODNOT_POT 3
 
 
 bool zamknuto = 0;
@@ -24,7 +24,7 @@ class pot
 private:
     int pin;
 
-    int values[11];
+    int values[POCET_HODNOT_POT];
     int value;
     int tolerance;
 
@@ -46,10 +46,11 @@ pot::pot(uint8_t p, const int v[POCET_HODNOT_POT], const int t)
 
 int pot::getValue()
 {
-
+    pom = analogRead(pin);
     int low;
     int high;
-    for (int i = 0; i < 11; i++)
+    value = -1;
+    for (int i = 0; i < POCET_HODNOT_POT; i++)
     {
         low = values[i] - tolerance;
         high = values[i] + tolerance;
@@ -58,9 +59,9 @@ int pot::getValue()
             value = i;
             //Serial.println(i);
         }
-        //Serial.println(low);
-        //Serial.println(high);
-        //Serial.println("");
+        // Serial.println(low);
+        // Serial.println(high);
+        // Serial.println("");
     }
     //Serial.println(value);
     return value;
@@ -118,6 +119,7 @@ void zamkni()
             delay(CAS_POHYBU_SERVA);
             zamknuto = !zamknuto;
             rozsvit(L_G);
+            Serial.println("zammceno");
         }
         else
         {
@@ -142,6 +144,7 @@ void odemkni()
             delay(CAS_POHYBU_SERVA);
             zamknuto = !zamknuto;
             zhasni(L_G);
+            Serial.println("odemceno");
         }
         else
         {
