@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #pragma once
-#define tlacitko1 SW1
-#define tlacitko2 SW2
-#define koncovy_spinac SW3
+#define TLACITKO1 SW1
+#define TLACITKO2 SW2
+#define KONCOVY_SPINAC SW3
 
 static const uint8_t D0 = 0;
 static const uint8_t D1 = 1;

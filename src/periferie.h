@@ -14,6 +14,18 @@
 
 #define POCET_HODNOT_POT 3
 
+enum stav_LED : byte
+{   
+    NESVIT,
+    SVIT,
+    ZABLIKEJ,
+    ERROR= 254, 
+    READ = 255
+};
+static stav_LED state_now_r = NESVIT;
+static stav_LED state_now_y = NESVIT;
+static stav_LED state_now_g = NESVIT;
+static stav_LED state_now_b = NESVIT;
 
 bool zamknuto = 0;
 
@@ -107,6 +119,135 @@ void nastav_ledky()
 {
     pinMode(L_Y, OUTPUT);
     pinMode(L_G, OUTPUT);
+    pinMode(L_R, OUTPUT);
+}
+
+stav_LED cervena_led(stav_LED state_to_set = READ)
+{
+    const byte led = L_R;
+    switch (state_to_set)
+    {
+    case SVIT:
+            digitalWrite(led, HIGH);
+            state_now_r = SVIT;
+        break;
+    case NESVIT:
+            digitalWrite(led, LOW);
+            state_now_r = NESVIT;
+        break;
+    case ZABLIKEJ:
+            for (int i = 0; i < 3; i++)
+            {
+                digitalWrite(led, HIGH);
+                delay(50);
+                digitalWrite(led, LOW);
+                delay(100);
+            }
+            state_now_r = NESVIT;
+        break;
+    case READ:
+            return state_now_r;
+    default:
+            return ERROR;
+        break;
+    }
+    return state_now_r;
+}
+
+stav_LED zluta_led(stav_LED state_to_set = READ)
+{
+    const byte led = L_Y;
+    switch (state_to_set)
+    {
+    case SVIT:
+            digitalWrite(led, HIGH);
+            state_now_y = SVIT;
+        break;
+    case NESVIT:
+            digitalWrite(led, LOW);
+            state_now_y = NESVIT;
+        break;
+    case ZABLIKEJ:
+            for (int i = 0; i < 3; i++)
+            {
+                digitalWrite(led, HIGH);
+                delay(50);
+                digitalWrite(led, LOW);
+                delay(100);
+            }
+            state_now_y = NESVIT;
+        break;
+    case READ:
+            return state_now_y;
+    default:
+            return ERROR;
+        break;
+    }
+    return state_now_y;
+}
+
+stav_LED zluta_led(stav_LED state_to_set = READ)
+{
+    const byte led = L_G;
+    switch (state_to_set)
+    {
+    case SVIT:
+            digitalWrite(led, HIGH);
+            state_now_g = SVIT;
+        break;
+    case NESVIT:
+            digitalWrite(led, LOW);
+            state_now_g = NESVIT;
+        break;
+    case ZABLIKEJ:
+            for (int i = 0; i < 3; i++)
+            {
+                digitalWrite(led, HIGH);
+                delay(50);
+                digitalWrite(led, LOW);
+                delay(100);
+            }
+            state_now_g = NESVIT;
+        break;
+    case READ:
+            return state_now_g;
+    default:
+            return ERROR;
+        break;
+    }
+    return state_now_g;
+}
+
+stav_LED zluta_led(stav_LED state_to_set = READ)
+{
+    const byte led = L_B;
+    switch (state_to_set)
+    {
+    case SVIT:
+            digitalWrite(led, HIGH);
+            state_now_b = SVIT;
+        break;
+    case NESVIT:
+            digitalWrite(led, LOW);
+            state_now_b = NESVIT;
+        break;
+    case ZABLIKEJ:
+            for (int i = 0; i < 3; i++)
+            {
+                digitalWrite(led, HIGH);
+                delay(50);
+                digitalWrite(led, LOW);
+                delay(100);
+            }
+            state_now_b = NESVIT;
+        break;
+    case READ:
+            return state_now_b;
+    default:
+            return ERROR;
+        break;
+    }
+    return state_now_b;
 }
 
 void zamkni()

@@ -21,7 +21,7 @@ void setup()
 
 void loop()
 {
-  if (je_zmacknute_tlacitko(tlacitko1))
+  if (je_zmacknute_tlacitko(TLACITKO1))
   {
     rozsvit(L_Y);
   }
@@ -38,7 +38,7 @@ void loop()
   //   zamkni();
   // }
 
-  if((Ciselnik1.getValue()==1)&&(Ciselnik2.getValue()==1)){
+  if((Ciselnik1.getValue()==heslo[0])&&(Ciselnik2.getValue()==heslo[1])&&je_zmacknute_tlacitko(TLACITKO2)){
     odemkni();
   }else{
     zamkni();

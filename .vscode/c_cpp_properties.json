@@ -8,7 +8,7 @@
             "includePath": [
                 "e:/Projects/primestak-2019/include",
                 "e:/Projects/primestak-2019/src",
-                "C:/Users/Tom/.platformio/lib/Servo_ID883/src",
+                "e:/Projects/primestak-2019/.pio/libdeps/nanoatmega328/Servo_ID883/src",
                 "C:/Users/Tom/.platformio/packages/framework-arduinoavr/cores/arduino",
                 "C:/Users/Tom/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs",
                 "C:/Users/Tom/.platformio/lib/Adafruit Unified Sensor_ID31",
@@ -18,6 +18,7 @@
                 "C:/Users/Tom/.platformio/lib/ESP32 AnalogWrite_ID5819/src",
                 "C:/Users/Tom/.platformio/lib/Heltec ESP32 Dev-Boards_ID6051/src",
                 "C:/Users/Tom/.platformio/lib/ServoESP32_ID1739/src",
+                "C:/Users/Tom/.platformio/lib/Servo_ID883/src",
                 "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                 "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
                 "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
@@ -32,7 +33,7 @@
                 "path": [
                     "e:/Projects/primestak-2019/include",
                     "e:/Projects/primestak-2019/src",
-                    "C:/Users/Tom/.platformio/lib/Servo_ID883/src",
+                    "e:/Projects/primestak-2019/.pio/libdeps/nanoatmega328/Servo_ID883/src",
                     "C:/Users/Tom/.platformio/packages/framework-arduinoavr/cores/arduino",
                     "C:/Users/Tom/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs",
                     "C:/Users/Tom/.platformio/lib/Adafruit Unified Sensor_ID31",
@@ -42,6 +43,7 @@
                     "C:/Users/Tom/.platformio/lib/ESP32 AnalogWrite_ID5819/src",
                     "C:/Users/Tom/.platformio/lib/Heltec ESP32 Dev-Boards_ID6051/src",
                     "C:/Users/Tom/.platformio/lib/ServoESP32_ID1739/src",
+                    "C:/Users/Tom/.platformio/lib/Servo_ID883/src",
                     "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                     "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
                     "C:/Users/Tom/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
