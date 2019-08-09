@@ -186,7 +186,7 @@ stav_LED zluta_led(stav_LED state_to_set = READ)
     return state_now_y;
 }
 
-stav_LED zluta_led(stav_LED state_to_set = READ)
+stav_LED zelena_led(stav_LED state_to_set = READ)
 {
     const byte led = L_G;
     switch (state_to_set)
@@ -218,7 +218,7 @@ stav_LED zluta_led(stav_LED state_to_set = READ)
     return state_now_g;
 }
 
-stav_LED zluta_led(stav_LED state_to_set = READ)
+stav_LED modra_led(stav_LED state_to_set = READ)
 {
     const byte led = L_B;
     switch (state_to_set)
